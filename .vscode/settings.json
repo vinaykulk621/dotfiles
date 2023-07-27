@@ -1,0 +1,70 @@
+{
+    "files.autoSave": "afterDelay",
+    "remoteHub.commitDirectlyWarning": "off",
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.formatOnPaste": true,
+    "html.format.contentUnformatted": "",
+    "html.format.indentInnerHtml": true,
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "[html]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on",
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        "*.html": "html"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontLigatures": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave": true
+    },
+    "terminal.integrated.shellIntegration.history": 100,
+    "terminal.integrated.persistentSessionScrollback": 10,
+    "terminal.integrated.scrollback": 100,
+    "json.maxItemsComputed": 15000,
+    "editor.accessibilitySupport": "off",
+    "python.defaultInterpreterPath": "C:\\Users\\Kulka\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.useInlineCompletions": true,
+    "prettier.enableDebugLogs": true,
+    "prettier.endOfLine": "auto",
+    "prettier.htmlWhitespaceSensitivity": "ignore",
+    "prettier.bracketSameLine": true,
+    "prettier.singleAttributePerLine": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "prettier.resolveGlobalModules": true,
+    "editor.formatOnSave": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "eslint.run": "onSave",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": -1,
+}
