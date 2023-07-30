@@ -1,4 +1,4 @@
 {
-  "format:write": "prettier --write \"**/*.{js,ts,tsx,mdx,md}\" --cache",
-  "format:check": "prettier --check \"**/*.{js,ts,tsx,mdx,md}\" --cache"
+  "format-w": "prettier --write \"**/*.{js,ts,tsx,mdx,md}\" --cache",
+  "format-c": "prettier --check \"**/*.{js,ts,tsx,mdx,md}\" --cache"
 }
