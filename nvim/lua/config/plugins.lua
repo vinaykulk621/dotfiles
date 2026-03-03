@@ -22,8 +22,8 @@ require("lazy").setup({
             formatters_by_ft = {
                 python = { "black" },
                 go = { "gofmt" },
-                vue = { "prettier" },        -- ADD
-
+                vue = { "prettier" },        
+                markdown = { "prettier" },    
             },
         },
     },
@@ -129,12 +129,12 @@ require("lazy").setup({
                 "python", 
                 "go",
                 "lua",
-                "vue",          -- ADD THIS
-                "javascript",   -- ADD
-                "typescript",   -- ADD
-                "tsx",          -- ADD
-
-
+                "vue",          
+                "javascript",   
+                "typescript",   
+                "tsx",           
+                "markdown",         
+                "markdown_inline",  
             },
             highlight = { enable = true },
             indent = { enable = true },
