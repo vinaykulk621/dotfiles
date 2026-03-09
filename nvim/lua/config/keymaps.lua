@@ -17,18 +17,6 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 
--- filetype specific formatter
-local function set_keymaps()
-    local filetype = vim.bo.filetype
-    if filetype == "go" then
-        vim.keymap.set("n", "<leader>f", ":!gofmt -s -w %<CR>", { silent = true })
-    end
-end
-
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = "*",
-    callback = set_keymaps,
-})
 vim.keymap.set("n", "<leader>f", function()
     require("conform").format({ async = true})
 end)
