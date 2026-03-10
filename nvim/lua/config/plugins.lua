@@ -1,7 +1,3 @@
--- removing default screen
-
-
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -29,6 +25,7 @@ require("lazy").setup({
                 go = { "gofmt" },
                 vue = { "prettier" },        
                 markdown = { "prettier" },    
+                rust = { "rustfmt" },
             },
         },
     },
@@ -53,6 +50,7 @@ require("lazy").setup({
                 "pyright",
                 "gopls",
                 "ts_ls",        -- TypeScript
+                "rust_analyzer",
             },
         },
     },
@@ -79,6 +77,11 @@ require("lazy").setup({
             -- Vue (Volar)
             vim.lsp.config("volar", {})
             vim.lsp.enable("volar")
+
+
+            -- Rust
+            vim.lsp.config("rust_analyzer", {})
+            vim.lsp.enable("rust_analyzer")
 
 
             -- LSP keymaps
@@ -140,6 +143,7 @@ require("lazy").setup({
                 "tsx",           
                 "markdown",         
                 "markdown_inline",  
+                "rust",
             },
             highlight = { enable = true },
             indent = { enable = true },
@@ -235,5 +239,12 @@ require("lazy").setup({
         "catppuccin/nvim",
         name = "catppuccin",
         priority = 1000, -- load first
-    }
+    },
+
+    --RUSTTTTTT
+    {
+        "mrcjkb/rustaceanvim",
+        version = "^4",
+        lazy = false,
+    },
 })
