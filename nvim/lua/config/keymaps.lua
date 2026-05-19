@@ -17,9 +17,6 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 
-vim.keymap.set("n", "<leader>f", function()
-    require("conform").format({ async = true})
-end)
 
 -- quickfix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -40,7 +37,6 @@ vim.keymap.set("n", "<leader>ee",
 -- Ctrl + / to toggle comment
 vim.keymap.set("n", "<leader>/", "gcc", { remap = true })
 vim.keymap.set("v", "<leader>/", "gc", { remap = true })
-vim.keymap.set("i", "<leader>/", "gc", { remap = true })
 
 
 --switching windows/tabs

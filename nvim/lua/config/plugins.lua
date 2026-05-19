@@ -51,6 +51,7 @@ require("lazy").setup({
                 "gopls",
                 "ts_ls",        -- TypeScript
                 "rust_analyzer",
+                "vue_ls",
             },
         },
     },
@@ -71,13 +72,21 @@ require("lazy").setup({
 
 
             -- TypeScript
-            vim.lsp.config("ts_ls", {})
+            vim.lsp.config("ts_ls", {
+                filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+
+            })
             vim.lsp.enable("ts_ls")
 
-            -- Vue (Volar)
-            vim.lsp.config("volar", {})
-            vim.lsp.enable("volar")
-
+            vim.lsp.config("vue_ls", {
+                filetypes = { "vue" },
+                init_options = {
+                    vue = {
+                        hybridMode = true,  -- hybrid mode lets ts_ls + vue_ls share the work
+                    },
+                },
+            })
+            vim.lsp.enable("vue_ls")
 
             -- Rust
             vim.lsp.config("rust_analyzer", {})
@@ -110,6 +119,7 @@ require("lazy").setup({
         },
         config = function()
             local cmp = require("cmp")
+
             cmp.setup({
                 mapping = cmp.mapping.preset.insert({
                     ["<CR>"] = cmp.mapping.confirm({ select = true }),
