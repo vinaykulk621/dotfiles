@@ -21,7 +21,7 @@ require("lazy").setup({
             },
 
             formatters_by_ft = {
-                python = { "black" },
+                python = { "ruff_organize_imports", "ruff_format" },
                 go = { "gofmt" },
                 vue = { "prettier" },        
                 markdown = { "prettier" },    
@@ -48,6 +48,7 @@ require("lazy").setup({
         opts = {
             ensure_installed = { 
                 "pyright",
+                "ruff",
                 "gopls",
                 "ts_ls",        -- TypeScript
                 "rust_analyzer",
@@ -65,6 +66,17 @@ require("lazy").setup({
             -- Python
             vim.lsp.config("pyright", {})
             vim.lsp.enable("pyright")
+
+
+            vim.lsp.config("ruff", {
+                init_options = {
+                    settings = {
+                        organizeImports = true,
+                        fixAll = true,
+                    },
+                },
+            })
+            vim.lsp.enable("ruff")
 
             -- Go
             vim.lsp.config("gopls", {})
